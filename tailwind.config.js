@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import scrollbar from "tailwind-scrollbar";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -11,7 +14,16 @@ export default {
         "action-button": "#ff5722",
         "base-text": "#e0e0e0",
       },
+      screens: {
+        md_8: "800px",
+        md_9: "900px",
+        lg_11: "1100px",
+        lg_12: "1200px",
+      },
     },
   },
-  plugins: [],
+  variants: {
+    scrollbar: ["rounded"],
+  },
+  plugins: [scrollbar({ nocompatible: true })],
 };

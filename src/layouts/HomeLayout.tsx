@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../components/global/Header";
-import Footer from "../components/global/Footer";
 import { Outlet } from "react-router-dom";
 
 const HomeLayout: React.FC = () => {
   return (
-    <main className="h-auto w-screen bg-base-background text-base-text">
-      <Header />
-      <Outlet />
-      <Footer />
+    <main className="h-screen overflow-hidden w-auto bg-base-background text-base-text pt-1 scrollbar-none">
+      <section className="max-w-[1500px] m-auto">
+        <Header />
+        <Outlet />
+      </section>
     </main>
   );
 };
