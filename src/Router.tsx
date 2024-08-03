@@ -1,11 +1,12 @@
 import React from "react";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomeLayout from "./layouts/HomeLayout";
 
 const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Authentication />}></Route> */}
+        <Route path="/" element={<HomeLayout />}></Route>
       </Routes>
     </BrowserRouter>
   );
